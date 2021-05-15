@@ -48,4 +48,11 @@ episphere.openFile <- function(id=787813783402,ver=""){
   # for example of a specific version, episphere.openFile(787813783402,841936237402)
 }
 
+episphere.read <- function(id=787813783402,ver=""){
+  if(stringr::str_length(ver)==0){
+    ver=NULL
+  }
+  box_read(file_id=id,version_id=ver)
+}
+
 episphere()
