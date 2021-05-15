@@ -6,16 +6,22 @@
 #' @keywords episphere, dceg, box.com
 #' @export
 #' @examples 
-#' episphere()
+#' connect()
 
-episphere <- function(){
+connect <- function(){
   # ini
   # info on packaging at https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
-  episphere.require("boxr")  # use collection for multiple libraries
+  # followed by /Library/Frameworks/R.framework/Resources/R CMD build episphere
+  requirePkj(c("boxr"))  # use collection for multiple libraries
   box_auth("627lww8un9twnoa8f9rjvldf7kb56q1m","gSKdYKLd65aQpZGrq9x4QVUNnn5C8qqm")
 }
 
-episphere.require <- function(pkj){
+#' Check packages
+#' 
+#' @param name of package, as a string or a collection of strings
+#' @export
+
+requirePkj <- function(pkj){
   if(typeof(pkj)=="character"){pkj=c(pkj)}
   lapply(
     pkj,
@@ -28,27 +34,43 @@ episphere.require <- function(pkj){
   )
 }
 
-episphere.openURL <- function(url="https://episphere.github.io/r"){
+#' opens browser with url
+#' @param url
+#' @export
+
+openURL <- function(url="https://episphere.github.io/r"){
   utils::browseURL(url)
 }
 
-episphere.openFolder <- function(id=133596945131){
-  episphere.openURL(paste("https://nih.app.box.com/folder/",id,sep=""))
+#' opens browser with url
+#' @param folder id
+#' @export
+
+openFolder <- function(id=133596945131){
+  openURL(paste("https://nih.app.box.com/folder/",id,sep=""))
   message(paste("folder #",id," opened in your browser",sep=""))
 }
 
-episphere.openFile <- function(id=787813783402,ver=NULL){
+#' opens file in browser with box file id
+#' @param file id, version id
+#' @export
+
+openFile <- function(id=787813783402,ver=NULL){
   url=paste("https://nih.app.box.com/file/",id,sep="")
   if(typeof(NULL)!="NULL"){
     url=paste(url,"?sb=/details/versions/",ver,sep="")
   }
   message(paste("browser tab opened at",url))
-  episphere.openURL(url)
-  # for example of a specific version, episphere.openFile(787813783402,841936237402)
+  openURL(url)
+  # for example of a specific version, openFile(787813783402,841936237402)
 }
 
-episphere.read <- function(id=787813783402,ver=NULL){
+#' wrapper for box_read, under development
+#' @param file id, version id
+#' @export
+
+read <- function(id=787813783402,ver=NULL){
   box_read(file_id=id,version_id=ver)
 }
 
-episphere()
+connect()
