@@ -1,6 +1,16 @@
 
+#' epiSphere data platform
+#' 
+#' initialize epiSphere's data platform by loading and logging into Box.com
+#' @param none, box authentication is started by default
+#' @keywords episphere, dceg, box.com
+#' @export
+#' @examples 
+#' episphere()
+
 episphere <- function(){
   # ini
+  # info on packaging at https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
   episphere.require(c("boxr","stringr"))  # use collection for multiple libraries
   box_auth("627lww8un9twnoa8f9rjvldf7kb56q1m","gSKdYKLd65aQpZGrq9x4QVUNnn5C8qqm")
 }
