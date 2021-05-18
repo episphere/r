@@ -1,0 +1,14 @@
+Package: episphere
+Title: FAIR Data Platform
+Version: 0.0.0.9003
+Authors@R: 
+    person(given = "Jonas",
+           family = "Almeida",
+           role = c("aut", "cre"),
+           email = "jonas.dealmeida@nih.gov",
+           comment = "https://episphere.github.io/r")
+Description: Connecting RStudio with epiSphere's Box object store. Note that two factor authentication will be inforced by epiSphere's OAuth2 authenticator. Full functionality reccomends ssh rsa key with Github repository where code is being developed.
+License: use_mit_license()
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1.9001
