@@ -11,4 +11,6 @@ To load episphere in your RStudio project do
 * Connecting RStudio to Box: ...
 * Connecting RStudio to Github: ...
 
-<img width=400 src="https://github.com/episphere/r/blob/main/Data%20Platform%20Diagram.png">
+<img width=300 src="https://github.com/episphere/r/blob/main/Data%20Platform%20Diagram.png">
+<img width=400 src="https://github.com/episphere/r/blob/main/withPictures.png">
+
