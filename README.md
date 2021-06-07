@@ -9,9 +9,9 @@ To load episphere in your RStudio project do
 
 ## 5 min Youtube videos:
 
-* Data Platform (<a href="https://nih.app.box.com/file/810301962766" target="_blank">BoxDoc</a>, <a href="https://docs.google.com/document/d/1t-A7UTcdSqrxZcw7_Is4v_Lr6cuDPZ3rOEX20u4MRZU/edit?usp=sharing" target="_blank">GoogleDoc</a>) overview : <a href="https://www.youtube.com/watch?v=moDB-1G_IfY" target="_blank">www.youtube.com/watch?v=moDB-1G_IfY</a> .
+* Data Platform (<a href="https://nih.app.box.com/file/810301962766" target="_blank">BoxDoc</a>, <a href="https://docs.google.com/document/d/1t-A7UTcdSqrxZcw7_Is4v_Lr6cuDPZ3rOEX20u4MRZU/edit?usp=sharing" target="_blank">GoogleDoc</a>) overview : <a href="https://www.youtube.com/watch?v=moDB-1G_IfY" target="_blank">youtube.com/watch?v=moDB-1G_IfY</a> .
 * Connecting RStudio to Box: ...
-* Connecting RStudio to Github: ...
+* Connecting RStudio to Github: <a href="https://www.youtube.com/watch?v=In0ytEnDqKk" target="_blank">youtube.com/watch?v=In0ytEnDqKk</a>
 
 <img width=600 src="https://episphere.github.io/r/withPictures.png">
 
