@@ -28,7 +28,7 @@ episphere.require <- function(pkj){
   )
 }
 
-episphere.openURL <- function(url="https://episphere.github.io/r"){
+episphere.openURL <- function(url="https://github.com/episphere/r/blob/main/episphere.R"){
   utils::browseURL(url)
 }
 
