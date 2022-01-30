@@ -11,7 +11,7 @@
 episphere <- function(){
   # ini
   # info on packaging at https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
-  episphere.require("boxr")  # use collection for multiple libraries
+  episphere.require(c("boxr","diffobj"))  # use collection for multiple libraries
   box_auth("627lww8un9twnoa8f9rjvldf7kb56q1m","gSKdYKLd65aQpZGrq9x4QVUNnn5C8qqm")
 }
 
