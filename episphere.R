@@ -1,21 +1,28 @@
 
-#' epiSphere data platform
-#' 
-#' initialize epiSphere's data platform by loading and logging into Box.com
-#' @param none, box authentication is started by default
-#' @keywords episphere, dceg, box.com
-#' @export
-#' @examples 
-#' episphere()
 
 episphere <- function(){
-  # ini
-  # info on packaging at https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
-  episphere.require(c("boxr","diffobj"))  # use collection for multiple libraries
+  #' epiSphere data platform
+  #' 
+  #' `epiSphere()` will initialize the data platform by loading tidyverse and logging into your Box.com account.
+  #' Box will be used as the cloud-hosted, user-governed shared data space.
+  #' @param none, Box authentication is checked by default.
+  #' @keywords episphere, dceg, box.com
+  #' @export
+  #' @examples 
+  #' episphere()
+  episphere.require(c("boxr","tidyverse","docstring"))  # use collection for multiple libraries
   box_auth("627lww8un9twnoa8f9rjvldf7kb56q1m","gSKdYKLd65aQpZGrq9x4QVUNnn5C8qqm")
 }
 
+
 episphere.require <- function(pkj){
+  #' require packages, will be installed if not available
+  #' 
+  #' @parm a string or a collection of strings indicating the package name.
+  #' @examples
+  #' episphere.require(c("diffobj","kaos"))
+  #' episphere.require("diffobj")
+  
   if(typeof(pkj)=="character"){pkj=c(pkj)}
   lapply(
     pkj,
@@ -26,6 +33,7 @@ episphere.require <- function(pkj){
       }
     }
   )
+  paste("number of pkjs required:",length(pkj))
 }
 
 episphere.openURL <- function(url="https://github.com/episphere/r/blob/main/episphere.R"){
