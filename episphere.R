@@ -26,7 +26,7 @@ episphere.require <- function(pkj){
   if(typeof(pkj)=="character"){pkj=c(pkj)}
   lapply(
     pkj,
-    FUN = function(x) {
+    function(x) {
       if (!require(x, character.only = TRUE)) {
         install.packages(x, dependencies = TRUE)
         library(x, character.only = TRUE)
