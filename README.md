@@ -3,7 +3,7 @@ episphere R package, also live at https://episphere.github.io/r !
 
 To load episphere in your RStudio project do 
 
-<b><i style="backgroundColor:yellow;color:navy"> source("https://episphere.github.io/r/episphere.R") </i></b>
+<b><pre style="backgroundColor:yellow;color:navy"> source("https://episphere.github.io/r/episphere.R") </pre></b>
 
 <img width=300 src="https://episphere.github.io/r/Data%20Platform%20Diagram.png">
 
