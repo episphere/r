@@ -1,5 +1,4 @@
 
-
 episphere <- function(){
   #' epiSphere data platform
   #' 
@@ -14,15 +13,13 @@ episphere <- function(){
   box_auth("627lww8un9twnoa8f9rjvldf7kb56q1m","gSKdYKLd65aQpZGrq9x4QVUNnn5C8qqm")
 }
 
-
 episphere.require <- function(pkj){
   #' require packages, will be installed if not available
   #' 
   #' @parm a string or a collection of strings indicating the package name.
   #' @examples
   #' episphere.require(c("diffobj","kaos"))
-  #' episphere.require("diffobj")
-  
+  #' episphere.require("diffobj")  
   if(typeof(pkj)=="character"){pkj=c(pkj)}
   lapply(
     pkj,
