@@ -9,7 +9,7 @@ episphere <- function(){
   #' @export
   #' @examples 
   #' episphere()
-  episphere.require(c("boxr","tidyverse","docstring"))  # use collection for multiple libraries
+  episphere.require(c("boxr","tidyverse","docstring","bigrquery"))  # use collection for multiple libraries
   box_auth("627lww8un9twnoa8f9rjvldf7kb56q1m","gSKdYKLd65aQpZGrq9x4QVUNnn5C8qqm")
 }
 
@@ -56,4 +56,11 @@ episphere.read <- function(id=787813783402,ver=NULL){
   box_read(file_id=id,version_id=ver)
 }
 
+episphere.logout <- function(){
+  # at some point make it granular, to distinguish, for example, Box from BigQuery
+  box_fresh_auth()
+}
+
+
 episphere()
+
