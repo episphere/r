@@ -56,13 +56,22 @@ episphere.read <- function(id=787813783402,ver=NULL){
   box_read(file_id=id,version_id=ver)
 }
 
+episphere.login <- function(conn=c('box','bq')){
+  if(conn=='box'||match('box',conn)){ # boxr
+    box_auth()
+  }
+  if(conn=='bq'||match('bq',conn)){ # BigQuery
+    bq_auth()
+  }
+}
+
 episphere.logout <- function(conn='box'){
   # at some point make it granular, to distinguish, for example, Box from BigQuery
   if(conn=='box'){ # boxr
     box_fresh_auth()
   }
   if(conn=='bq'){ # BigQuery
-    # ...
+    bq_deauth()
   }
 }
 
