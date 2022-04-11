@@ -75,6 +75,5 @@ episphere.logout <- function(conn='box'){
   }
 }
 
- 
 episphere()
 
